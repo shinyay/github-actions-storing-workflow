@@ -46,6 +46,7 @@ This action allows you to download artifacts that were previously uploaded in th
 ## References
 
 - [@actions/upload-artifact](https://github.com/actions/upload-artifact)
+- [@actions/download-artifact](https://github.com/actions/download-artifact)
 
 ## Licence
 
