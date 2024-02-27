@@ -4,6 +4,22 @@ Artifacts allow you to share data between jobs in a workflow and store data once
 
 ## Description
 
+### Artifacts
+
+Files or collections of files produced during a workflow run that can be shared between jobs or downloaded after the run.
+
+### Usage and billing
+
+Artifacts are stored on GitHub for a default or custom retention period and use storage space that may affect billing.
+
+### Uploading and downloading artifacts
+
+You can use the upload-artifact and download-artifact actions to upload and download artifacts within a workflow run.
+
+### Sharing data between jobs
+
+You can use artifacts to pass data between jobs in a workflow, such as build output or test reports.
+
 ## Demo
 
 ## Features
