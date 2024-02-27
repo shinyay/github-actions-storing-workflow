@@ -68,6 +68,45 @@ This action allows you to upload files or directories as artifacts during a work
 
 This action allows you to download artifacts that were previously uploaded in the same workflow run. You can specify a name for the artifact, or download all artifacts in the workflow run. You can also specify a path to the download directory. Artifacts are downloaded as zip files, and you can unzip them using the actions/cache@v2 action. Downloading artifacts is useful for accessing data from another job in the same workflow, or for viewing data after a workflow run has ended. For example, you can use artifacts to download your test results, build logs, or deployment packages.
 
+```shell
+- uses: actions/download-artifact@v4
+  with:
+    # Name of the artifact to download.
+    # If unspecified, all artifacts for the run are downloaded.
+    # Optional.
+    name:
+
+    # Destination path. Supports basic tilde expansion.
+    # Optional. Default is $GITHUB_WORKSPACE
+    path:
+
+    # A glob pattern to the artifacts that should be downloaded.
+    # Ignored if name is specified.
+    # Optional.
+    pattern:
+
+    # When multiple artifacts are matched, this changes the behavior of the destination directories.
+    # If true, the downloaded artifacts will be in the same directory specified by path.
+    # If false, the downloaded artifacts will be extracted into individual named directories within the specified path.
+    # Optional. Default is 'false'
+    merge-multiple:
+
+    # The GitHub token used to authenticate with the GitHub API.
+    # This is required when downloading artifacts from a different repository or from a different workflow run.
+    # Optional. If unspecified, the action will download artifacts from the current repo and the current workflow run.
+    github-token:
+
+    # The repository owner and the repository name joined together by "/".
+    # If github-token is specified, this is the repository that artifacts will be downloaded from.
+    # Optional. Default is ${{ github.repository }}
+    repository:
+
+    # The id of the workflow run where the desired download artifact was uploaded from.
+    # If github-token is specified, this is the run that artifacts will be downloaded from.
+    # Optional. Default is ${{ github.run_id }}
+    run-id:
+```
+
 ## Demo
 
 ## Features
