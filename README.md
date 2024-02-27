@@ -1,6 +1,6 @@
-# Name
+# Storing workflow data as artifacts
 
-Overview
+Artifacts allow you to share data between jobs in a workflow and store data once that workflow has completed.
 
 ## Description
 
