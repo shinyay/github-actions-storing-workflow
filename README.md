@@ -122,6 +122,7 @@ This action allows you to download artifacts that were previously uploaded in th
 
 ## References
 
+- [Storing workflow data as artifacts](https://docs.github.com/en/actions/using-workflows/storing-workflow-data-as-artifacts)
 - [@actions/upload-artifact](https://github.com/actions/upload-artifact)
 - [@actions/download-artifact](https://github.com/actions/download-artifact)
 
